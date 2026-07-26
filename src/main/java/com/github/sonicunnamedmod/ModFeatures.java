@@ -63,13 +63,9 @@ public class ModFeatures {
         addFeatureToBiome(BiomeKeys.SUNFLOWER_PLAINS, GREEN_HILL_TOTEM_PLACED_KEY);
         addFeatureToBiome(BiomeKeys.SUNFLOWER_PLAINS, GREEN_HILL_VEGETATION_PLACED_KEY);
 
-        addFeatureToBiome(BiomeKeys.FOREST, GREEN_HILL_PALM_PLACED_KEY);
-        addFeatureToBiome(BiomeKeys.FOREST, GREEN_HILL_TOTEM_PLACED_KEY);
-        addFeatureToBiome(BiomeKeys.FOREST, GREEN_HILL_VEGETATION_PLACED_KEY);
-
-        addFeatureToBiome(BiomeKeys.FLOWER_FOREST, GREEN_HILL_PALM_PLACED_KEY);
-        addFeatureToBiome(BiomeKeys.FLOWER_FOREST, GREEN_HILL_TOTEM_PLACED_KEY);
-        addFeatureToBiome(BiomeKeys.FLOWER_FOREST, GREEN_HILL_VEGETATION_PLACED_KEY);
+        addFeatureToBiome(ModBiomes.GREEN_HILL_BIOME, GREEN_HILL_PALM_PLACED_KEY);
+        addFeatureToBiome(ModBiomes.GREEN_HILL_BIOME, GREEN_HILL_TOTEM_PLACED_KEY);
+        addFeatureToBiome(ModBiomes.GREEN_HILL_BIOME, GREEN_HILL_VEGETATION_PLACED_KEY);
     }
 
     private static void addFeatureToBiome(RegistryKey<net.minecraft.world.biome.Biome> biomeKey, RegistryKey<PlacedFeature> featureKey) {
