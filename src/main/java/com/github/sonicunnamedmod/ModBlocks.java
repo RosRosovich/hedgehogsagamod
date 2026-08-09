@@ -255,7 +255,6 @@ public class ModBlocks {
                 new Block(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
         register("marble_tiles_slab", new SlabBlock(AbstractBlock.Settings.copy(MARBLE_TILES).requiresTool()));
         register("marble_tiles_stairs", new StairsBlock(MARBLE_TILES.getDefaultState(), AbstractBlock.Settings.copy(MARBLE_TILES).requiresTool()));
-        register("marble_tiles_wall", new WallBlock(AbstractBlock.Settings.copy(MARBLE_TILES).requiresTool()));
 
         POLISHED_MARBLE = register("polished_marble",
                 new Block(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
@@ -291,7 +290,6 @@ public class ModBlocks {
                 new Block(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
         register("green_marble_tiles_slab", new SlabBlock(AbstractBlock.Settings.copy(GREEN_MARBLE_TILES).requiresTool()));
         register("green_marble_tiles_stairs", new StairsBlock(GREEN_MARBLE_TILES.getDefaultState(), AbstractBlock.Settings.copy(GREEN_MARBLE_TILES).requiresTool()));
-        register("green_marble_tiles_wall", new WallBlock(AbstractBlock.Settings.copy(GREEN_MARBLE_TILES).requiresTool()));
 
         register("green_chiseled_marble",
                 new Block(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
@@ -329,13 +327,10 @@ public class ModBlocks {
             entries.add(PALM_WOOD);
             entries.add(STRIPPED_PALM_BLOCK);
             entries.add(STRIPPED_PALM_WOOD);
-            entries.add(PALM_BLOCK_SLAB);
-            entries.add(PALM_BLOCK_STAIRS);
             entries.add(PALM_PLANKS);
             entries.add(PALM_SLAB);
             entries.add(PALM_STAIRS);
             entries.add(PALM_FENCE);
-            entries.add(PALM_FENCE_GATE);
             entries.add(ModItems.PALM_DOOR_ITEM);
             entries.add(PALM_BUTTON);
             entries.add(PALM_PRESSURE_PLATE);
@@ -360,7 +355,6 @@ public class ModBlocks {
             entries.add(MARBLE_TILES);
             entries.add(Registries.BLOCK.get(Identifier.of(SonicUnnamedMod.MOD_ID, "marble_tiles_slab")));
             entries.add(Registries.BLOCK.get(Identifier.of(SonicUnnamedMod.MOD_ID, "marble_tiles_stairs")));
-            entries.add(Registries.BLOCK.get(Identifier.of(SonicUnnamedMod.MOD_ID, "marble_tiles_wall")));
 
             entries.add(POLISHED_MARBLE);
             entries.add(Registries.BLOCK.get(Identifier.of(SonicUnnamedMod.MOD_ID, "polished_marble_slab")));
@@ -380,7 +374,6 @@ public class ModBlocks {
             entries.add(GREEN_MARBLE_TILES);
             entries.add(Registries.BLOCK.get(Identifier.of(SonicUnnamedMod.MOD_ID, "green_marble_tiles_slab")));
             entries.add(Registries.BLOCK.get(Identifier.of(SonicUnnamedMod.MOD_ID, "green_marble_tiles_stairs")));
-            entries.add(Registries.BLOCK.get(Identifier.of(SonicUnnamedMod.MOD_ID, "green_marble_tiles_wall")));
 
             entries.add(Registries.BLOCK.get(Identifier.of(SonicUnnamedMod.MOD_ID, "green_chiseled_marble")));
             entries.add(Registries.BLOCK.get(Identifier.of(SonicUnnamedMod.MOD_ID, "green_chiseled_marble_bricks")));

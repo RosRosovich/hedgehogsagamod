@@ -1,5 +1,5 @@
 {
-  "biome.sonicunnamedmod.green_hill_biome": "Зеленый Холм",
+  "biome.sonicunnamedmod.green_hill_biome": "Южный Остров",
   "itemGroup.sonicunnamedmod.blocks": "SonicUnnamedMod",
   "block.sonicunnamedmod.palm_door": "\u041f\u0430\u043b\u044c\u043c\u043e\u0432\u0430\u044f \u0434\u0432\u0435\u0440\u044c",
   "death.attack.metal_spike": "%1$s напоролся на металлические шипы",
@@ -60,7 +60,6 @@
   "block.sonicunnamedmod.marble_tiles": "Мраморная плитка",
   "block.sonicunnamedmod.marble_tiles_slab": "Плита из мраморной плитки",
   "block.sonicunnamedmod.marble_tiles_stairs": "Ступеньки из мраморной плитки",
-  "block.sonicunnamedmod.marble_tiles_wall": "Ограда из мраморной плитки",
 
   "block.sonicunnamedmod.polished_marble": "Полированный мрамор",
   "block.sonicunnamedmod.polished_marble_slab": "Плита из полированного мрамора",
@@ -80,7 +79,6 @@
   "block.sonicunnamedmod.green_marble_tiles": "Зелёная мраморная плитка",
   "block.sonicunnamedmod.green_marble_tiles_slab": "Плита из зелёной мраморной плитки",
   "block.sonicunnamedmod.green_marble_tiles_stairs": "Ступеньки из зелёной мраморной плитки",
-  "block.sonicunnamedmod.green_marble_tiles_wall": "Ограда из зелёной мраморной плитки",
 
   "block.sonicunnamedmod.green_chiseled_marble": "Резной зелёный мрамор",
   "block.sonicunnamedmod.green_chiseled_marble_bricks": "Резные зелёные мраморные кирпичи",

@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "sonicunnamedmod",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "name": "SonicUnnamed Mod",
-  "description": "",
+  "description": "Adds new decorative blocks, plants, worldgen features, and MUCH MORE inspired by Sonic.",
   "authors": ["DobriyMsi, SergoFox"],
   "license": "MIT",
+  "icon": "assets/sonicunnamedmod/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [

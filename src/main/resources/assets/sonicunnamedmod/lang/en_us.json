@@ -1,5 +1,5 @@
 {
-  "biome.sonicunnamedmod.green_hill_biome": "Green Hill",
+  "biome.sonicunnamedmod.green_hill_biome": "South Island",
   "itemGroup.sonicunnamedmod.blocks": "SonicUnnamedMod",
   "block.sonicunnamedmod.palm_door": "Palm Door",
   "death.attack.metal_spike": "%1$s was impaled on metal spikes",
@@ -61,7 +61,6 @@
   "block.sonicunnamedmod.marble_tiles": "Marble Tiles",
   "block.sonicunnamedmod.marble_tiles_slab": "Marble Tile Slab",
   "block.sonicunnamedmod.marble_tiles_stairs": "Marble Tile Stairs",
-  "block.sonicunnamedmod.marble_tiles_wall": "Marble Tile Wall",
 
   "block.sonicunnamedmod.polished_marble": "Polished Marble",
   "block.sonicunnamedmod.polished_marble_slab": "Polished Marble Slab",
@@ -81,7 +80,6 @@
   "block.sonicunnamedmod.green_marble_tiles": "Green Marble Tiles",
   "block.sonicunnamedmod.green_marble_tiles_slab": "Green Marble Tiles Slab",
   "block.sonicunnamedmod.green_marble_tiles_stairs": "Green Marble Tiles Stairs",
-  "block.sonicunnamedmod.green_marble_tiles_wall": "Green Marble Tiles Wall",
 
   "block.sonicunnamedmod.green_chiseled_marble": "Chiseled Green Marble",
   "block.sonicunnamedmod.green_chiseled_marble_bricks": "Chiseled Green Marble Bricks",
