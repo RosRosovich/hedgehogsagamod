@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/stairs",
+  "parent": "minecraft:block/inner_stairs",
   "textures": {
     "bottom": "sonicunnamedmod:block/marble_bricks",
     "side": "sonicunnamedmod:block/marble_bricks",
