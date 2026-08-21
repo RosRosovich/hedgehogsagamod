@@ -1,7 +1,7 @@
-package com.github.sonicunnamedmod.block;
+package com.github.hedgehogsaga.block;
 
 import com.mojang.serialization.MapCodec;
-import com.github.sonicunnamedmod.SonicUnnamedMod;
+import com.github.hedgehogsaga.HedgehogSagaMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -19,7 +19,7 @@ public class MetalSpikeBlock extends Block {
     public static final MapCodec<MetalSpikeBlock> CODEC = createCodec(MetalSpikeBlock::new);
     private static final RegistryKey<DamageType> METAL_SPIKE_DAMAGE_TYPE = RegistryKey.of(
             RegistryKeys.DAMAGE_TYPE,
-            Identifier.of(SonicUnnamedMod.MOD_ID, "metal_spike")
+            Identifier.of(HedgehogSagaMod.MOD_ID, "metal_spike")
     );
     private static final VoxelShape COLLISION_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 4.0, 16.0);
     private static final VoxelShape OUTLINE_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
