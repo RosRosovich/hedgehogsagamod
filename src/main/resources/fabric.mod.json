@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "id": "sonicunnamedmod",
-  "version": "0.0.1",
+  "id": "hedgehogsaga",
+  "version": "0.0.2",
   "name": "SonicUnnamed Mod",
   "description": "Adds new decorative blocks, plants, worldgen features, and MUCH MORE inspired by Sonic.",
   "authors": ["DobriyMsi, SergoFox"],
   "license": "MIT",
-  "icon": "assets/sonicunnamedmod/icon.png",
+  "icon": "assets/hedgehogsaga/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.sonicunnamedmod.SonicUnnamedMod"
+      "com.github.hedgehogsaga.HedgehogSagaMod"
     ],
     "client": [
-      "com.github.sonicunnamedmod.ModBlocksClient"
+      "com.github.hedgehogsaga.ModBlocksClient"
     ]
   },
   "mixins": [
-    "sonicunnamedmod.mixins.json"
+    "hedgehogsaga.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.0",

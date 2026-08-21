@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "hedgehogsaga:block/palm_sapling"
+  }
+}

@@ -1,4 +1,4 @@
-# 🌴 Sonic Unnamed Mod
+# 🌴 Hedgehog Saga Mod
 
 ![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21.1-blue?style=for-the-badge&logo=minecraft)
 ![Fabric Version](https://img.shields.io/badge/Fabric-0.16.9+-orange?style=for-the-badge&logo=fabric)
@@ -13,5 +13,5 @@
 - **Fabric API 0.116.12+**
 - **Java 21**
   
-[Curse](https://www.curseforge.com/minecraft/mc-mods/sonix-unnamed)
-[Modrinth](https://modrinth.com/mod/sonix-unnamed)
+[Curse](https://www.curseforge.com/minecraft/mc-mods/hedgehog-saga)
+[Modrinth](https://modrinth.com/mod/hedgehog-saga)

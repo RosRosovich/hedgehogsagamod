@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "hedgehogsaga:palm_thorn"
+    },
+    "B": {
+      "item": "hedgehogsaga:palm_block"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hedgehogsaga:wooden_spike"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_hill_sunflower": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hedgehogsaga:green_hill_sunflower"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hedgehogsaga:green_hill_sunflower_to_green_dye"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_green_hill_sunflower",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hedgehogsaga:green_hill_sunflower_to_green_dye"
+    ]
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "hedgehogsaga:marble_bricks_slab",
+    "hedgehogsaga:marble_tiles_slab",
+    "hedgehogsaga:polished_marble_slab",
+    "hedgehogsaga:green_marble_bricks_slab",
+    "hedgehogsaga:green_polished_marble_slab",
+    "hedgehogsaga:green_marble_tiles_slab"
+  ]
+}

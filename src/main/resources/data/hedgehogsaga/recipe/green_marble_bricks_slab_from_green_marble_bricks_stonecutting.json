@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "hedgehogsaga:green_marble_bricks"
+  },
+  "result": {
+    "count": 2,
+    "id": "hedgehogsaga:green_marble_bricks_slab"
+  }
+}

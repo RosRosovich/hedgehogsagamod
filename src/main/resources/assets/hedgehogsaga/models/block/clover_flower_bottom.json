@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "hedgehogsaga:block/clover_flower_bottom"
+  }
+}

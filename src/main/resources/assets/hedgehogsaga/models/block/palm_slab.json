@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "hedgehogsaga:block/palm_planks",
+    "side": "hedgehogsaga:block/palm_planks",
+    "top": "hedgehogsaga:block/palm_planks"
+  }
+}

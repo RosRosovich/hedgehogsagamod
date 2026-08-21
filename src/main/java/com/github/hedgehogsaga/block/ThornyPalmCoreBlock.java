@@ -1,0 +1,149 @@
+package com.github.hedgehogsaga.block;
+
+import com.github.hedgehogsaga.ModBlocks;
+import com.github.hedgehogsaga.HedgehogSagaMod;
+import com.mojang.serialization.MapCodec;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.ItemEntity;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageType;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.ItemActionResult;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.Box;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.world.World;
+
+public class ThornyPalmCoreBlock extends Block {
+    public static final MapCodec<ThornyPalmCoreBlock> CODEC = createCodec(ThornyPalmCoreBlock::new);
+    public static final RegistryKey<DamageType> PALM_NEEDLES_DAMAGE_TYPE = RegistryKey.of(
+            RegistryKeys.DAMAGE_TYPE,
+            Identifier.of(HedgehogSagaMod.MOD_ID, "palm_needles")
+    );
+    private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+    private static final double PIXEL = 1.0 / 16.0;
+    private static final double NEEDLE_REACH = 3.0 * PIXEL;
+    private static final double CORNER_NEEDLE_REACH = 1.5 * PIXEL;
+    private static final Box[] NEEDLE_HITBOXES = {
+            // The two crossed planes protruding from the middle of every side.
+            new Box(7.0 * PIXEL, 0.0, -NEEDLE_REACH, 9.0 * PIXEL, 1.0, 0.0),
+            new Box(7.0 * PIXEL, 0.0, 1.0, 9.0 * PIXEL, 1.0, 1.0 + NEEDLE_REACH),
+            new Box(-NEEDLE_REACH, 0.0, 7.0 * PIXEL, 0.0, 1.0, 9.0 * PIXEL),
+            new Box(1.0, 0.0, 7.0 * PIXEL, 1.0 + NEEDLE_REACH, 1.0, 9.0 * PIXEL),
+
+            // The four short diagonal rows at the corners of the model.
+            new Box(-CORNER_NEEDLE_REACH, 0.0, -CORNER_NEEDLE_REACH, 0.0, 1.0, 0.0),
+            new Box(1.0, 0.0, -CORNER_NEEDLE_REACH, 1.0 + CORNER_NEEDLE_REACH, 1.0, 0.0),
+            new Box(-CORNER_NEEDLE_REACH, 0.0, 1.0, 0.0, 1.0, 1.0 + CORNER_NEEDLE_REACH),
+            new Box(1.0, 0.0, 1.0, 1.0 + CORNER_NEEDLE_REACH, 1.0, 1.0 + CORNER_NEEDLE_REACH)
+    };
+
+    public ThornyPalmCoreBlock(Settings settings) {
+        super(settings);
+    }
+
+    @Override
+    public MapCodec<? extends Block> getCodec() {
+        return CODEC;
+    }
+
+    @Override
+    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos,
+                                            PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (!stack.isOf(Items.SHEARS)) {
+            return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        }
+
+        if (!world.isClient) {
+            world.setBlockState(pos, ModBlocks.PALM_CORE.getDefaultState(), Block.NOTIFY_ALL);
+            Block.dropStack(world, pos, new ItemStack(ModBlocks.PALM_THORN, 6));
+            world.playSound(null, pos, SoundEvents.ENTITY_SHEEP_SHEAR, SoundCategory.BLOCKS, 1.0f, 1.0f);
+            if (player instanceof ServerPlayerEntity serverPlayer) {
+                EquipmentSlot slot = hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND;
+                stack.damage(1, (ServerWorld) world, serverPlayer, item -> serverPlayer.sendEquipmentBreakStatus(item, slot));
+            }
+        }
+
+        return ItemActionResult.success(world.isClient);
+    }
+
+    @Override
+    protected VoxelShape getCollisionShape(BlockState state, net.minecraft.world.BlockView world, BlockPos pos,
+                                           net.minecraft.block.ShapeContext context) {
+        return SHAPE;
+    }
+
+    @Override
+    protected VoxelShape getOutlineShape(BlockState state, net.minecraft.world.BlockView world, BlockPos pos,
+                                         net.minecraft.block.ShapeContext context) {
+        return SHAPE;
+    }
+
+    public static void registerDamageHandler() {
+        ServerTickEvents.END_WORLD_TICK.register(world -> {
+            for (ServerPlayerEntity player : world.getPlayers()) {
+                if (isTouchingThornyPalmCore(world, player)) {
+                    damageEntityWithoutMotion(world, player);
+                }
+            }
+        });
+    }
+
+    private static boolean isTouchingThornyPalmCore(ServerWorld world, Entity entity) {
+        Box entityBox = entity.getBoundingBox();
+        Box searchBox = entityBox.expand(NEEDLE_REACH);
+        int minX = MathHelper.floor(searchBox.minX);
+        int minY = MathHelper.floor(searchBox.minY);
+        int minZ = MathHelper.floor(searchBox.minZ);
+        int maxX = MathHelper.floor(searchBox.maxX);
+        int maxY = MathHelper.floor(searchBox.maxY);
+        int maxZ = MathHelper.floor(searchBox.maxZ);
+
+        for (BlockPos blockPos : BlockPos.iterate(minX, minY, minZ, maxX, maxY, maxZ)) {
+            if (!world.getBlockState(blockPos).isOf(ModBlocks.THORNY_PALM_CORE)) {
+                continue;
+            }
+
+            for (Box needleHitbox : NEEDLE_HITBOXES) {
+                if (entityBox.intersects(needleHitbox.offset(blockPos))) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    private static void damageEntityWithoutMotion(World world, Entity entity) {
+        if (entity instanceof ItemEntity) {
+            return;
+        }
+
+        Vec3d velocity = entity.getVelocity();
+        entity.damage(createPalmNeedlesDamageSource(world), 1.0f);
+        entity.setVelocity(velocity);
+    }
+
+    private static DamageSource createPalmNeedlesDamageSource(World world) {
+        return new DamageSource(world.getRegistryManager()
+                .get(RegistryKeys.DAMAGE_TYPE)
+                .entryOf(PALM_NEEDLES_DAMAGE_TYPE));
+    }
+}

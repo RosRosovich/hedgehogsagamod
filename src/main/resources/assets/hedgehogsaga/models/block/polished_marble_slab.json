@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "hedgehogsaga:block/polished_marble",
+    "top": "hedgehogsaga:block/polished_marble",
+    "side": "hedgehogsaga:block/polished_marble"
+  }
+}

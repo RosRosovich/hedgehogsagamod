@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "sonicunnamedmod:block/green_marble_tiles",
-    "side": "sonicunnamedmod:block/green_marble_tiles",
-    "top": "sonicunnamedmod:block/green_marble_tiles"
-  }
-}

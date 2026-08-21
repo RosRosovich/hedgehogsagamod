@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "sonicunnamedmod:block/green_marble_bricks",
-    "top": "sonicunnamedmod:block/green_marble_bricks",
-    "side": "sonicunnamedmod:block/green_marble_bricks"
-  }
-}

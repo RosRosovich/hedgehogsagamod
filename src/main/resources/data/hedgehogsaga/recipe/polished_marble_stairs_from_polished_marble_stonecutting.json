@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "hedgehogsaga:polished_marble"
+  },
+  "result": {
+    "count": 1,
+    "id": "hedgehogsaga:polished_marble_stairs"
+  }
+}

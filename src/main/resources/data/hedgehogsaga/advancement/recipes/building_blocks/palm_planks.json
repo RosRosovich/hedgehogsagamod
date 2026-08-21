@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_palm_blocks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#hedgehogsaga:palm_blocks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_palm_cores": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#hedgehogsaga:palm_cores"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hedgehogsaga:palm_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_palm_blocks",
+      "has_palm_cores",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hedgehogsaga:palm_planks"
+    ]
+  },
+  "sends_telemetry_event": true
+}

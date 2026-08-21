@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "hedgehogsaga:block/stripped_palm_core_side",
+    "down": "hedgehogsaga:block/stripped_palm_core_top",
+    "up": "hedgehogsaga:block/stripped_palm_core_top",
+    "north": "hedgehogsaga:block/totem_golem_block",
+    "east": "hedgehogsaga:block/stripped_palm_core_side",
+    "south": "hedgehogsaga:block/stripped_palm_core_side",
+    "west": "hedgehogsaga:block/stripped_palm_core_side"
+  }
+}

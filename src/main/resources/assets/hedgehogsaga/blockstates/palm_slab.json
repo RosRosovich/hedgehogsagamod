@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hedgehogsaga:block/palm_slab"
+    },
+    "type=top": {
+      "model": "hedgehogsaga:block/palm_slab_top"
+    },
+    "type=double": {
+      "model": "hedgehogsaga:block/palm_planks"
+    }
+  }
+}

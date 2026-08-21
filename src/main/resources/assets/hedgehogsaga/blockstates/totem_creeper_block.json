@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "hedgehogsaga:block/totem_creeper_block",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "hedgehogsaga:block/totem_creeper_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "hedgehogsaga:block/totem_creeper_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hedgehogsaga:block/totem_creeper_block",
+      "y": 270
+    }
+  }
+}

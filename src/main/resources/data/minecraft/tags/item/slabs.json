@@ -1,10 +1,10 @@
 {
   "values": [
-    "sonicunnamedmod:marble_bricks_slab",
-    "sonicunnamedmod:marble_tiles_slab",
-    "sonicunnamedmod:polished_marble_slab",
-    "sonicunnamedmod:green_marble_bricks_slab",
-    "sonicunnamedmod:green_polished_marble_slab",
-    "sonicunnamedmod:green_marble_tiles_slab"
+    "hedgehogsaga:marble_bricks_slab",
+    "hedgehogsaga:marble_tiles_slab",
+    "hedgehogsaga:polished_marble_slab",
+    "hedgehogsaga:green_marble_bricks_slab",
+    "hedgehogsaga:green_polished_marble_slab",
+    "hedgehogsaga:green_marble_tiles_slab"
   ]
 }

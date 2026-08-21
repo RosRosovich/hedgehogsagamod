@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "hedgehogsaga:block/clover_flower_bottom"
+    },
+    "half=upper": {
+      "model": "hedgehogsaga:block/clover_flower_top"
+    }
+  }
+}

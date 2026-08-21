@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "hedgehogsaga:block/marble_tiles",
+    "side": "hedgehogsaga:block/marble_tiles",
+    "top": "hedgehogsaga:block/marble_tiles"
+  }
+}

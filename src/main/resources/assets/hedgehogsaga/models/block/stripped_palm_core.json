@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "hedgehogsaga:block/stripped_palm_core_top",
+    "side": "hedgehogsaga:block/stripped_palm_core_side"
+  }
+}

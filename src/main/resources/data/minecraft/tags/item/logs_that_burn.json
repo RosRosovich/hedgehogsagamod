@@ -1,9 +1,9 @@
 {
   "values": [
-    "sonicunnamedmod:palm_log",
-    "sonicunnamedmod:palm_block",
-    "sonicunnamedmod:palm_wood",
-    "sonicunnamedmod:stripped_palm_wood",
-    "sonicunnamedmod:stripped_palm_block"
+    "hedgehogsaga:palm_log",
+    "hedgehogsaga:palm_block",
+    "hedgehogsaga:palm_wood",
+    "hedgehogsaga:stripped_palm_wood",
+    "hedgehogsaga:stripped_palm_block"
   ]
 }

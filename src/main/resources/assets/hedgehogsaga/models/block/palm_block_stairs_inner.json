@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "hedgehogsaga:block/palm_block",
+    "side": "hedgehogsaga:block/palm_block_top",
+    "top": "hedgehogsaga:block/palm_block"
+  }
+}

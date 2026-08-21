@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hedgehogsaga:item/green_hill_bush"
+  }
+}
