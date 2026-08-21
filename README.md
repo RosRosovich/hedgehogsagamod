@@ -12,3 +12,5 @@
 - **Fabric Loader 0.16.9+**
 - **Fabric API 0.116.12+**
 - **Java 21**
+[Curse](https://www.curseforge.com/minecraft/mc-mods/sonix-unnamed)
+[Modrinth](https://modrinth.com/mod/sonix-unnamed)
