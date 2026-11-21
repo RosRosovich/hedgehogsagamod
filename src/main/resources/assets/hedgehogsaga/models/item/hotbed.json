@@ -1,3 +1,6 @@
 {
-  "parent": "hedgehogsaga:block/hotbed"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hedgehogsaga:item/hotbed"
+  }
 }
