@@ -83,5 +83,6 @@
   "block.hedgehogsaga.green_chiseled_marble": "Резной зелёный мрамор",
   "block.hedgehogsaga.green_chiseled_marble_bricks": "Резные зелёные мраморные кирпичи",
   "block.hedgehogsaga.green_marble_pillar": "Колонна из зелёного мрамора",
-  "block.hedgehogsaga.green_push_marble": "Зелёный нажимной мрамор"
+  "block.hedgehogsaga.green_push_marble": "Зелёный нажимной мрамор",
+  "entity.hedgehogsaga.push_marble": "Зелёный нажимной мрамор"
 }

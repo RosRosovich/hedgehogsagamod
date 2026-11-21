@@ -84,5 +84,6 @@
   "block.hedgehogsaga.green_chiseled_marble": "Chiseled Green Marble",
   "block.hedgehogsaga.green_chiseled_marble_bricks": "Chiseled Green Marble Bricks",
   "block.hedgehogsaga.green_marble_pillar": "Green Marble Pillar",
-  "block.hedgehogsaga.green_push_marble": "Green Push Marble"
+  "block.hedgehogsaga.green_push_marble": "Green Push Marble",
+  "entity.hedgehogsaga.push_marble": "Green Push Marble"
 }

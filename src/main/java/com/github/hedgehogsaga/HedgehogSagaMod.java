@@ -3,6 +3,7 @@ package com.github.hedgehogsaga;
 import com.github.hedgehogsaga.block.GreenHillInteractionHandler;
 import com.github.hedgehogsaga.block.PalmCoreInteractionHandler;
 import com.github.hedgehogsaga.block.ThornyPalmCoreBlock;
+import com.github.hedgehogsaga.entity.PushMarbleEntity;
 import net.fabricmc.api.ModInitializer;
 
 public class HedgehogSagaMod implements ModInitializer {
@@ -12,6 +13,7 @@ public class HedgehogSagaMod implements ModInitializer {
     public void onInitialize() {
         ModBlocks.registerAll();
         ModItems.registerAll();
+        PushMarbleEntity.register();
         ModFeatures.registerAll();
         ModBiomes.registerAll();
         ModComposter.register();

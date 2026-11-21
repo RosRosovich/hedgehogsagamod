@@ -201,6 +201,7 @@ public class ModBlocks {
     public static Block GREEN_MARBLE_BRICKS;
     public static Block GREEN_POLISHED_MARBLE;
     public static Block GREEN_MARBLE_TILES;
+    public static Block GREEN_PUSH_MARBLE;
 
     public static final Block PALM_LEAVES = register("palm_leaves",
             new PalmLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)
@@ -300,8 +301,8 @@ public class ModBlocks {
         register("green_marble_pillar",
                 new GreenMarblePillarBlock(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
 
-        register("green_push_marble",
-                new Block(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
+        GREEN_PUSH_MARBLE = register("green_push_marble",
+                new PushMarbleBlock(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
 
         ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP_KEY).register(entries -> {
             entries.add(CLOVER_FLOWER);
