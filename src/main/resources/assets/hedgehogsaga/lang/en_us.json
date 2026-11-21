@@ -86,6 +86,10 @@
   "block.hedgehogsaga.green_marble_pillar": "Green Marble Pillar",
   "block.hedgehogsaga.green_push_marble": "Green Push Marble",
   "entity.hedgehogsaga.push_marble": "Green Push Marble",
+  "block.hedgehogsaga.chiseled_marble": "Chiseled Marble",
+  "block.hedgehogsaga.chiseled_marble_bricks": "Chiseled Marble Bricks",
+  "block.hedgehogsaga.cracked_marble_bricks": "Cracked Marble Bricks",
+  "block.hedgehogsaga.hotbed": "Hotbed",
 
   "item.hedgehogsaga.green_chaos_emerald": "Green Chaos Emerald",
   "item.hedgehogsaga.red_chaos_emerald": "Red Chaos Emerald",

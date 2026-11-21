@@ -85,6 +85,10 @@
   "block.hedgehogsaga.green_marble_pillar": "Колонна из зелёного мрамора",
   "block.hedgehogsaga.green_push_marble": "Зелёный нажимной мрамор",
   "entity.hedgehogsaga.push_marble": "Зелёный нажимной мрамор",
+  "block.hedgehogsaga.chiseled_marble": "Резной мрамор",
+  "block.hedgehogsaga.chiseled_marble_bricks": "Резные мраморные кирпичи",
+  "block.hedgehogsaga.cracked_marble_bricks": "Потрескавшиеся мраморные кирпичи",
+  "block.hedgehogsaga.hotbed": "Жаровня",
 
   "item.hedgehogsaga.green_chaos_emerald": "Зелёный изумруд хаоса",
   "item.hedgehogsaga.red_chaos_emerald": "Красный изумруд хаоса",

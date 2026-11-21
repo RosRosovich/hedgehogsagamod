@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "M M",
+    "MCM",
+    "MPM"
+  ],
+  "key": {
+    "M": {
+      "item": "hedgehogsaga:green_marble_bricks"
+    },
+    "C": {
+      "item": "minecraft:coal"
+    },
+    "P": {
+      "item": "hedgehogsaga:green_polished_marble"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "hedgehogsaga:hotbed"
+  }
+}

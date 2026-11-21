@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=true": {
+      "model": "hedgehogsaga:block/hotbed"
+    },
+    "lit=false": {
+      "model": "hedgehogsaga:block/hotbed_extinguished"
+    }
+  }
+}

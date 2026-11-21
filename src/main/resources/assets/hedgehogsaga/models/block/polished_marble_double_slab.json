@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "hedgehogsaga:block/polished_marble",
+    "side": "hedgehogsaga:block/polished_marble_double_slab"
+  }
+}

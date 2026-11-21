@@ -26,6 +26,10 @@
     "hedgehogsaga:green_marble_pillar",
     "hedgehogsaga:green_push_marble",
     "hedgehogsaga:metal_spike",
-    "hedgehogsaga:totem_wings"
+    "hedgehogsaga:totem_wings",
+    "hedgehogsaga:chiseled_marble",
+    "hedgehogsaga:chiseled_marble_bricks",
+    "hedgehogsaga:cracked_marble_bricks",
+    "hedgehogsaga:hotbed"
   ]
 }
