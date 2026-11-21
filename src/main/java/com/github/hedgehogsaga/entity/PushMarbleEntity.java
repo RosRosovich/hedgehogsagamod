@@ -16,6 +16,8 @@ import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.network.codec.PacketCodecs;
 import net.minecraft.network.packet.CustomPayload;
+import com.github.hedgehogsaga.mixin.ServerPlayNetworkHandlerAccessor;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.tag.FluidTags;
@@ -66,8 +68,17 @@ public class PushMarbleEntity extends Entity {
         return e;
     }
 
-    public void clickPush(PlayerEntity player) {
-        Direction d = player.getHorizontalFacing();
+    public static Direction awayFromHit(double dx, double dz) {
+        return Math.abs(dx) >= Math.abs(dz)
+                ? (dx > 0 ? Direction.WEST : Direction.EAST)
+                : (dz > 0 ? Direction.NORTH : Direction.SOUTH);
+    }
+
+    public static boolean isShovel(ItemStack stack) {
+        return stack.isIn(ItemTags.SHOVELS);
+    }
+
+    public void shovelPush(PlayerEntity player, Direction d) {
         setVelocity(d.getOffsetX() * CLICK_SPEED, getVelocity().y, d.getOffsetZ() * CLICK_SPEED);
         velocityDirty = true;
         player.addExhaustion(CLICK_EXHAUSTION);
@@ -139,6 +150,12 @@ public class PushMarbleEntity extends Entity {
         if (!getWorld().isClient) {
             Vec3d after = getVelocity();
             setVelocity(after.x * drag, after.y * 0.98, after.z * drag);
+
+            Box top = getBoundingBox();
+            for (ServerPlayerEntity p : getWorld().getEntitiesByClass(ServerPlayerEntity.class,
+                    new Box(top.minX, top.maxY - 0.3, top.minZ, top.maxX, top.maxY + 0.6, top.maxZ).expand(0.3), p -> true)) {
+                ((ServerPlayNetworkHandlerAccessor) p.networkHandler).setFloatingTicks(0);
+            }
         }
     }
 
@@ -154,9 +171,9 @@ public class PushMarbleEntity extends Entity {
     }
 
     @Override
-    public ActionResult interact(PlayerEntity player, Hand hand) {
-        if (hand != Hand.MAIN_HAND) return ActionResult.PASS;
-        if (!getWorld().isClient) clickPush(player);
+    public ActionResult interactAt(PlayerEntity player, Vec3d hitPos, Hand hand) {
+        if (!isShovel(player.getStackInHand(hand))) return ActionResult.PASS;
+        if (!getWorld().isClient) shovelPush(player, awayFromHit(hitPos.x, hitPos.z));
         return ActionResult.success(getWorld().isClient);
     }
 

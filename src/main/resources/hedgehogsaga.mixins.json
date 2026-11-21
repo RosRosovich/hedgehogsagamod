@@ -3,7 +3,8 @@
   "package": "com.github.hedgehogsaga.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "WallBlockMixin"
+    "WallBlockMixin",
+    "ServerPlayNetworkHandlerAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
