@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "hedgehogsaga:block/flamethrower_top",
+    "side": "hedgehogsaga:block/flamethrower_side",
+    "bottom": "hedgehogsaga:block/green_polished_marble"
+  }
+}

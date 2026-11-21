@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "PFP",
+    "PRP",
+    "GGG"
+  ],
+  "key": {
+    "P": {
+      "item": "hedgehogsaga:polished_marble"
+    },
+    "F": {
+      "item": "minecraft:fire_charge"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "G": {
+      "item": "hedgehogsaga:green_polished_marble"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "hedgehogsaga:flamethrower"
+  }
+}

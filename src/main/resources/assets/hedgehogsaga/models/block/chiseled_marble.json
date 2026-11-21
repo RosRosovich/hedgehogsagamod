@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "hedgehogsaga:block/chiseled_marble"
+    "end": "hedgehogsaga:block/chiseled_marble_top",
+    "side": "hedgehogsaga:block/chiseled_marble"
   }
 }

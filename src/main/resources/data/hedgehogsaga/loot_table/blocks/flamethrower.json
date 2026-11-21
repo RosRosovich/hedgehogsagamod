@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hedgehogsaga:chiseled_marble_bricks"
+          "name": "hedgehogsaga:flamethrower"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "hedgehogsaga:blocks/chiseled_marble_bricks"
+  "random_sequence": "hedgehogsaga:blocks/flamethrower"
 }

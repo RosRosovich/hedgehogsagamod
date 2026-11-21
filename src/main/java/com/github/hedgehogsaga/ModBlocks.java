@@ -305,7 +305,7 @@ public class ModBlocks {
                 new PushMarbleBlock(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
 
         register("chiseled_marble", new Block(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
-        register("chiseled_marble_bricks", new Block(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
+        register("flamethrower", new FlamethrowerBlock(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
         register("cracked_marble_bricks", new Block(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool()));
         register("hotbed", new HotbedBlock(AbstractBlock.Settings.copy(Blocks.STONE).requiresTool().nonOpaque()
                 .luminance(s -> s.get(HotbedBlock.LIT) ? 15 : 0)));
@@ -386,7 +386,7 @@ public class ModBlocks {
             entries.add(Registries.BLOCK.get(Identifier.of(HedgehogSagaMod.MOD_ID, "green_chiseled_marble_bricks")));
             entries.add(Registries.BLOCK.get(Identifier.of(HedgehogSagaMod.MOD_ID, "green_marble_pillar")));
             entries.add(Registries.BLOCK.get(Identifier.of(HedgehogSagaMod.MOD_ID, "green_push_marble")));
-            for (String n : new String[]{"chiseled_marble", "chiseled_marble_bricks", "cracked_marble_bricks", "hotbed"}) {
+            for (String n : new String[]{"chiseled_marble", "cracked_marble_bricks", "hotbed", "flamethrower"}) {
                 entries.add(Registries.BLOCK.get(Identifier.of(HedgehogSagaMod.MOD_ID, n)));
             }
         });
