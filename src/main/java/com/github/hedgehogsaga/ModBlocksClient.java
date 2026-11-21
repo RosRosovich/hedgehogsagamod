@@ -2,7 +2,17 @@ package com.github.hedgehogsaga;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import com.github.hedgehogsaga.client.CharacterScreen;
+import com.github.hedgehogsaga.client.SpriteButton;
 import com.github.hedgehogsaga.entity.PushMarbleEntity;
+import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
+import net.fabricmc.fabric.api.client.screen.v1.Screens;
+import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen;
+import net.minecraft.client.gui.screen.ingame.InventoryScreen;
+import net.minecraft.client.gui.widget.ButtonWidget;
+import net.minecraft.client.gui.widget.TexturedButtonWidget;
+import net.minecraft.text.Text;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -47,6 +57,26 @@ public class ModBlocksClient implements ClientModInitializer {
             @Override
             public Identifier getTexture(PushMarbleEntity e) {
                 return PlayerScreenHandler.BLOCK_ATLAS_TEXTURE;
+            }
+        });
+
+        Identifier buttons = Identifier.of(HedgehogSagaMod.MOD_ID, "textures/gui/inventory_buttons.png");
+        ScreenEvents.AFTER_INIT.register((client, screen, w, h) -> {
+            Text label = Text.translatable("gui.hedgehogsaga.character");
+            if (screen instanceof InventoryScreen) {
+                ButtonWidget recipe = Screens.getButtons(screen).stream()
+                        .filter(b -> b instanceof TexturedButtonWidget).map(b -> (ButtonWidget) b).findFirst().orElse(null);
+                Screens.getButtons(screen).add(new SpriteButton((w - 176) / 2 + 126, h / 2 - 22, buttons, 199, 0, 18, label,
+                        b -> client.setScreen(new CharacterScreen())) {
+                    @Override
+                    protected void renderWidget(DrawContext ctx, int mx, int my, float delta) {
+                        if (recipe != null) setPosition(recipe.getX() + 22, recipe.getY());
+                        super.renderWidget(ctx, mx, my, delta);
+                    }
+                });
+            } else if (screen instanceof CreativeInventoryScreen) {
+                Screens.getButtons(screen).add(new SpriteButton((w - 195) / 2 + 197, (h - 136) / 2, buttons, 199, 0, 18, label,
+                        b -> client.setScreen(new CharacterScreen())));
             }
         });
 

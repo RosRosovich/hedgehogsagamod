@@ -14,6 +14,7 @@ public class HedgehogSagaMod implements ModInitializer {
         ModBlocks.registerAll();
         ModItems.registerAll();
         PushMarbleEntity.register();
+        ChaosEmeralds.register();
         ModFeatures.registerAll();
         ModBiomes.registerAll();
         ModComposter.register();

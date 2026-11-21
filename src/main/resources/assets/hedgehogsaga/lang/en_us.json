@@ -85,5 +85,26 @@
   "block.hedgehogsaga.green_chiseled_marble_bricks": "Chiseled Green Marble Bricks",
   "block.hedgehogsaga.green_marble_pillar": "Green Marble Pillar",
   "block.hedgehogsaga.green_push_marble": "Green Push Marble",
-  "entity.hedgehogsaga.push_marble": "Green Push Marble"
+  "entity.hedgehogsaga.push_marble": "Green Push Marble",
+
+  "item.hedgehogsaga.green_chaos_emerald": "Green Chaos Emerald",
+  "item.hedgehogsaga.red_chaos_emerald": "Red Chaos Emerald",
+  "item.hedgehogsaga.blue_chaos_emerald": "Blue Chaos Emerald",
+  "item.hedgehogsaga.yellow_chaos_emerald": "Yellow Chaos Emerald",
+  "item.hedgehogsaga.cyan_chaos_emerald": "Cyan Chaos Emerald",
+  "item.hedgehogsaga.purple_chaos_emerald": "Purple Chaos Emerald",
+  "item.hedgehogsaga.white_chaos_emerald": "White Chaos Emerald",
+  "gui.hedgehogsaga.character": "Character",
+  "gui.hedgehogsaga.back": "Back to inventory",
+  "gui.hedgehogsaga.sonic": "Sonic the Hedgehog",
+  "gui.hedgehogsaga.abilities": "Abilities: none yet",
+  "gui.hedgehogsaga.emerald_missing": "Not found yet",
+  "gui.hedgehogsaga.emeralds": "Chaos Emeralds: %s/7",
+  "gui.hedgehogsaga.super_uses": "Super form uses left: %s",
+  "gui.hedgehogsaga.shield.none": "No shield",
+  "gui.hedgehogsaga.shield.basic": "Shield",
+  "gui.hedgehogsaga.shield.lightning": "Lightning Shield",
+  "gui.hedgehogsaga.shield.bubble": "Bubble Shield",
+  "gui.hedgehogsaga.shield.flame": "Flame Shield",
+  "gui.hedgehogsaga.locked": "Locked"
 }

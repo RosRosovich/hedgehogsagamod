@@ -84,5 +84,26 @@
   "block.hedgehogsaga.green_chiseled_marble_bricks": "Резные зелёные мраморные кирпичи",
   "block.hedgehogsaga.green_marble_pillar": "Колонна из зелёного мрамора",
   "block.hedgehogsaga.green_push_marble": "Зелёный нажимной мрамор",
-  "entity.hedgehogsaga.push_marble": "Зелёный нажимной мрамор"
+  "entity.hedgehogsaga.push_marble": "Зелёный нажимной мрамор",
+
+  "item.hedgehogsaga.green_chaos_emerald": "Зелёный изумруд хаоса",
+  "item.hedgehogsaga.red_chaos_emerald": "Красный изумруд хаоса",
+  "item.hedgehogsaga.blue_chaos_emerald": "Синий изумруд хаоса",
+  "item.hedgehogsaga.yellow_chaos_emerald": "Жёлтый изумруд хаоса",
+  "item.hedgehogsaga.cyan_chaos_emerald": "Голубой изумруд хаоса",
+  "item.hedgehogsaga.purple_chaos_emerald": "Фиолетовый изумруд хаоса",
+  "item.hedgehogsaga.white_chaos_emerald": "Белый изумруд хаоса",
+  "gui.hedgehogsaga.character": "Персонаж",
+  "gui.hedgehogsaga.back": "Назад в инвентарь",
+  "gui.hedgehogsaga.sonic": "Ёж Соник",
+  "gui.hedgehogsaga.abilities": "Способности: пока нет",
+  "gui.hedgehogsaga.emerald_missing": "Ещё не найден",
+  "gui.hedgehogsaga.emeralds": "Изумруды хаоса: %s/7",
+  "gui.hedgehogsaga.super_uses": "Осталось использований супер формы: %s",
+  "gui.hedgehogsaga.shield.none": "Нет щита",
+  "gui.hedgehogsaga.shield.basic": "Щит",
+  "gui.hedgehogsaga.shield.lightning": "Электрический щит",
+  "gui.hedgehogsaga.shield.bubble": "Водный щит",
+  "gui.hedgehogsaga.shield.flame": "Огненный щит",
+  "gui.hedgehogsaga.locked": "Закрыто"
 }
